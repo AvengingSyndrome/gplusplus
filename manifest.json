@@ -1,0 +1,21 @@
+{
+	"manifest_version": 2,
+
+	"name": "gplusplus",
+	"description": "rewrites google plus urls to target a desired user - not just the primary one",
+	"version": "1.0",
+    "content_scripts": [
+	{
+	  "run_at":"document_end",
+      "matches": ["*://plus.google.com/*"],
+      "js": ["gplusplus.js"]
+    }],
+	"browser_action": {
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"storage",
+		"https://plus.google.com/"
+	]
+	
+}
